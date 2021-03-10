@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<title>West Coast Park</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+html {
+  scroll-behavior: smooth;
+}
+body {background-color: #f0f5f5; font-family: "Times New Roman", Georgia, Serif;}
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Georgia";
+  letter-spacing: 1px;
+}
+#overviewimg:hover {
+  -ms-transform: scale(1.1); /* IE 9 */
+  -webkit-transform: scale(1.1); /* Safari 3-8 */
+  transform: scale(1.1); 
+}
+#playgroundimg:hover {
+  -ms-transform: scale(1.1); /* IE 9 */
+  -webkit-transform: scale(1.1); /* Safari 3-8 */
+  transform: scale(1.1); 
+}
+#cyclingimg:hover {
+  -ms-transform: scale(1.1); /* IE 9 */
+  -webkit-transform: scale(1.1); /* Safari 3-8 */
+  transform: scale(1.1); 
+}
+mark { 
+  background-color: black;
+  color: white;
+}
+p {
+  text-align: justify;
+}
+.progress-container {
+  width: 100%;
+  height: 6px;
+  background: #ccc;
+}
+.progress-bar {
+  height: 6px;
+  background: #4caf50;
+  width: 0%;
+}
+</style>
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-padding w3-card" style="letter-spacing:1px;">
+    <a href="#home" class="w3-bar-item w3-button">West Coast Park</a>
+    <!-- Right-sided navbar links. Hide them on small screens -->
+    <div class="w3-right w3-hide-small">
+      <a href="#overview" class="w3-bar-item w3-button">Overview</a>
+	  <a href="#map" class="w3-bar-item w3-button">Map</a>
+      <a href="#playground" class="w3-bar-item w3-button">Playground</a>
+      <a href="#cycling" class="w3-bar-item w3-button">Cycling</a>
+    </div>
+  </div>
+  <div class="progress-container">
+    <div class="progress-bar" id="myBar"></div>
+  </div>  
+</div>
+
+<script>
+// When the user scrolls the page, execute myFunction 
+window.onscroll = function() {myFunction()};
+
+function myFunction() {
+  var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  var scrolled = (winScroll / height) * 100;
+  document.getElementById("myBar").style.width = scrolled + "%";
+}
+</script>
+
+<!-- Header -->
+<header class="w3-display-container w3-content w3-wide" style="max-width:1700px;min-width:800px;padding-top:60px" id="home">
+  <img class="w3-image" src="aerialwcp2.jpg" alt="West Coast Park">
+  <div class="w3-display-bottomleft w3-padding-large w3-opacity">
+    <h1 style="font-size:2vw";class="w3-xxlarge"><mark>Aerial View of West Coast Park region</mark></h1>
+  </div>
+</header>
+
+<!-- Page content -->
+<div class="w3-content" style="max-width:1300px">
+
+  <!-- Overview Section -->
+  <div class="w3-row w3-padding-64" id="overview">
+    <div class="w3-col m6 w3-padding-large w3-hide-small">
+     <img src="wcp1.jpg" class="w3-round w3-image w3-opacity-min" id="overviewimg" alt="West Coast Park Pyramid" style="width:100%">
+    </div>
+
+    <div class="w3-col m6 w3-padding-large">
+      <h1 class="w3-center">Overview</h1><br>
+      <h5 class="w3-center">Huh? Why not go East Coast Park?</h5>
+      <p class="w3-large">Situated in the (farrrr) West side of Singapore, West Coast Park is often overshadowedby its twin - East Coast Park - when families or groups of friends decide on a place to go for an outing. Despite so, there are actually many things you can do at West Coast Park while you get to avoid the huge weekend crowds at East Coast Park!<br><br>
+	  Apart from the scenic greenery and shorelines, West Coast Park offers many activities such as playing at the playgrounds, cycling, kite-flying, and even barbequing. Read on to find out more!</p>
+    </div>
+  </div>
+  
+  <hr>
+  
+    <!-- Map Section -->
+  <div class="w3-container w3-padding-64" id="map">
+    <h1 class="w3-center">Map</h1><br>
+	<img src="wcpmap1.jpeg" class="w3-round w3-image w3-opacity-min"  id="map1" alt="West Coast Park Map" usemap="#clickmap" width="100%" height="100%">
+    <h5 class="w3-center">Click on the specific places on the map to jump in and find out more!</h5>
+	<map name="clickmap">
+		<area shape="rect" coords="720,285,750,315" alt="GoCycling" href="https://gocycling.sg/singapore/">
+		<area shape="rect" coords="1010,345,1040,385" alt="McDonald's" href="https://www.mcdonalds.com.sg/">
+		<area shape="poly" coords="60,370,138,370,138,490,60,510" alt="Dog Wash" href="https://www.dogwash.com.sg/">
+		<area shape="poly" coords="1000,285,1170,285,1170,365,1100,335" alt="Grand Lawn" href="https://www2.nparks.gov.sg/vbs/external/Space/edit.aspx?ID=rqyL22bwrLpztVWm01sTahahs%2Fuyt0D2NCV3TsgwPrQuPmgh8NYP%2FPErHKaWR7KgQVVqvs1NLW269Ti7CrlwFWN%2F7tKXMwu5tgcSmZxwaVxX6NuR9%2Fhn%2Fw%3D%3D&TYPE=GHxazb09RtsITMgMFvVa0A%3D%3D&/">
+	</map>
+  </div>
+
+  <hr>
+	
+  <!-- Playground Section -->
+  <div class="w3-row w3-padding-64" id="playground">
+    <div class="w3-col l6 w3-padding-large">
+      <h1 class="w3-center">Adventure Playground</h1><br>
+	  <h4>Multiple Play Areas</h4>
+      <p class="w3-medium">Comprising of six different play areas, the Adventure Playground contains many exciting facilities to cater to children of all ranges. Apart from the iconic Pyramid, the Adventure Playground also include a Wooden Obstacle Course, Inclusive Playground, Toddler Play Area, Viking Ship Playground and Zip Line Play Zone.</p>
+      <h4>Flying Fox</h4>
+      <p class="w3-medium">Wait. Did you just mention a Zip Line?<br>In fact, we have not one, but four Zip Lines for Flying Fox! Families with children can definitely have fun here!</p>  
+    </div>
+    
+    <div class="w3-col l6 w3-padding-large">
+      <img src="flying fox.jpg" class="w3-round w3-image w3-opacity-min" id="playgroundimg" alt="Menu" style="width:100%">
+    </div>
+  </div>
+
+  <hr>
+
+    <!-- Cycling Section -->
+  <div class="w3-row w3-padding-64" id="cycling">
+    <div class="w3-col l6 w3-padding-large">
+      <img src="cycling1.jpg" class="w3-round w3-image w3-opacity-min" id="cyclingimg" alt="Cycling View" style="width:100%">
+    </div>
+	
+	<div class="w3-col l6 w3-padding-large">
+      <h1 class="w3-center">Cycling</h1><br>
+      <h4>Cycling down a scenic path</h4>
+      <p class="w3-medium">Rent a bicycle from the bike rental shop <span class="w3-tag w3-pale-yellow">GoCycling</span> for just $8/hr and tour around West Coast Park along the extensive cycling path! Enjoy the evening glow while cycling across the shoreline and you might even find an Instagram worthy scene.</p>
+	  <p class="w3-medium">The park connector would also lead you to the nearby Jurong Lake Gardens and Clementi Woods Park.</p>  
+    </div>
+    
+  </div>
+
+  <hr>
+    
+<!-- End page content -->
+</div>
+
+<!-- Footer -->
+<footer class="w3-center w3-sand w3-padding-32">
+  <p class="w3-center w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+  <p class="w3-center" w3-medium>Assignment 1: West Coast Park<br>Soh Hong Yi</p>
+</footer>
+
+</body>
+</html>
